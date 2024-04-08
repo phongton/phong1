@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    table {
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+      width: 80%;
+    }
+
+    td, th {
+      border: 1px solid #dddddd;
+      text-align: center;
+      padding: 8px;
+    }
+
+    tr:nth-child(even) {
+      background-color: #dddddd;
+    }
+  </style>
+</head>
+<h2> Market Research </h2>
+<div>Please take a few momments to complete this sactifaction survey</div>
+<body>
+<h4> What is your age range </h4>
+<select style="width: 200px" >
+  <option value="">18-24</option>
+  <option value="">25-34</option>
+  <option value="">35-50</option>
+  <option value="">50+</option>
+</select>
+<h4>What is your yearly income range?</h4>
+<select style="width: 200px">
+  <option value="">$0-$25,000</option>
+  <option value="">$25,000-$50,000</option>
+  <option value="">$50,000-$100,000</option>
+  <option value="">$100,000+  </option>
+</select>
+<br><br>
+<label>Gender identity</label><br>
+<label><input type="radio" name="gender">Male</label><br>
+<label><input type="radio" name="gender">Female</label><br>
+<label><input type="radio" name="gender">Nonbinary</label><br>
+<label><input type="radio" name="gender" onclick="">Other</label><br>
+<textarea style="width: 100px" rows="1" cols="1"></textarea>
+<h4>Which of the flowing products have your purchased in the last 2 months. Please check all that apply</h4>
+<input type="checkbox">Product1<br>
+<input type="checkbox">Product2<br>
+<input type="checkbox">Product3<br>
+<h4>How often would you use our new product?</h4>
+<label><input type="radio" name="day">Daily</label><br>
+<label><input type="radio" name="day">Weekly</label><br>
+<label><input type="radio" name="day">Monthly</label><br>
+<h4>What features would you like to see in the new product.</h4>
+<textarea style="width: 300px" rows="10" cols="10"></textarea>
+<table>
+  <tr>
+      <th></th>
+      <th>Strongly Dissagree</th>
+      <th>Diagree</th>
+      <th>Agree</th>
+      <th>Strongly agree</th>
+  </tr>
+  <tr>
+    <td>Our products are priced fairly.</td>
+    <td><input type="radio" name="number"><br>1</td>
+    <td><input type="radio" name="number"><br>2</td>
+    <td><input type="radio" name="number"><br>3</td>
+    <td><input type="radio" name="number"><br>4</td>
+  </tr>
+  <tr>
+    <td>Our products are high quality.</td>
+    <td><input type="radio" name="alo"><br>1</td>
+    <td><input type="radio" name="alo"><br>2</td>
+    <td><input type="radio" name="alo"><br>3</td>
+    <td><input type="radio" name="alo"><br>4</td>
+  </tr>
+  <tr>
+    <td>You would recommend our product to a friend or coworker.	</td>
+    <td><input type="radio" name="ola"><br>1</td>
+    <td><input type="radio" name="ola"><br>2</td>
+    <td><input type="radio" name="ola"><br>3</td>
+    <td><input type="radio" name="ola"><br>4</td>
+  </tr>
+</table>
+
+</body>
+</html>
