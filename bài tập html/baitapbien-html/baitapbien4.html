@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<H2> CACULATOR</H2>
+<br>
+<label><input type="number" id="so1" placeholder="Nhập số thứ nhất "></label>
+<label><input type="number" id="so2" placeholder="Nhập số thứ hai "></label>
+<br>
+<br>
+<button onclick="Add()">Addtion</button>
+<button onclick="Sub()">Subtraction</button>
+<button onclick="Mul()">Multiplication</button>
+<button onclick="Divi()">Division</button>
+<br>
+<h3>Result</h3>
+<p id="Result"></p>
+<script>
+  function Add() {
+    let so1 = +document.getElementById("so1").value;
+    let so2 = +document.getElementById("so2").value;
+    let Result = so1 + so2;
+    document.getElementById("Result").innerHTML = Result;
+  }
+function Sub(){
+    let so1 = +document.getElementById("so1").value;
+    let so2 = +document.getElementById("so2").value;
+    let Result= so1 - so2;
+    document.getElementById("Result").innerHTML= Result;
+
+}
+function Mul(){
+    let so1=+document.getElementById("so1").value;
+    let so2=+document.getElementById("so2").value;
+    let Result= so1 * so2;
+    document.getElementById("Result").innerHTML=Result;
+
+  }
+function Divi(){
+  let so1=+document.getElementById("so1").value;
+  let so2=+document.getElementById("so2").value;
+  let Result= so1/so2;
+  document.getElementById("Result").innerHTML= Result;
+}
+</script>
+</body>
+</html>
