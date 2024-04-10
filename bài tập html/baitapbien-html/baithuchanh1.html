@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<script>
+  let nam= +prompt("nhap so nam");
+  if (nam %4===0){
+    if (nam %100 ===0){
+      if(nam %400 ===0){
+        alert( nam+"day la nam nhuan");
+      }else {
+        alert(nam+"day khong phai nam nhuan");
+      }
+    }else {
+      alert(nam+"day la nam nhuan");
+    }
+  }else {
+    alert(nam + "day khong phai nam nhuan");
+  }
+</script>
+
+</body>
+</html>
