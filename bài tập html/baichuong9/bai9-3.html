@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<h1> Tính chỉ số cân nặng </h1>
+<label for="cannang"> Nhập cân nặng:  (kg)</label>
+<input type="text" name="" id="cannang">
+<br>
+<br>
+<label for="chieucao"> Nhập chiều cao:  (m)</label>
+<input type="text" name="" id="chieucao">
+<br>
+<button onclick="kiemtra()"> Kiểm tra </button>
+<br>
+<p id="result"></p>
+<script>
+  function kiemtra(){
+    let cannang=document.getElementById("cannang").value;
+    let chieucao=document.getElementById("chieucao").value;
+    let bmi= cannang/(Math.pow(chieucao,2));
+    let result= null ;
+    if (bmi<18.5){
+      result=" Gầy";
+    }else if(bmi>=18.5 && bmi <25 ){
+      result=" vừa phải";
+    }else if (bmi>=25 && bmi <30){
+      result=" Hơi béo ";
+    }else
+      result=" Mập như lợn  ";
+    document.getElementById("result").innerHTML="chỉ số của bạn là: " + bmi +result;
+
+  }
+
+</script>
+
+</body>
+</html>

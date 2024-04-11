@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en"
+>
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body onload="docReady()">
+
+<img id="banh" src="https://dathangsi.vn/upload/products/2019/12/0643-trai-banh-da-bong-official-so-4-va-so-5.jpg" style="position:absolute;left:0; top:0;" height="100" width="80" alt="">
+</body>
+<script>
+  function dilen() {
+    let element = document.getElementById("banh");
+    element.style.top = parseInt(element.style.top) - 5 + 'px';
+  }
+  function dixuong() {
+    let element = document.getElementById("banh");
+    element.style.top = parseInt(element.style.top) + 5 + 'px';
+  }
+  function retrai() {
+    let element = document.getElementById("banh");
+    element.style.left = parseInt(element.style.left) - 5 + 'px';
+  }
+  function rephai() {
+    let element = document.getElementById("banh");
+    element.style.left = parseInt(element.style.left) + 5 + 'px';
+
+  }
+  function moveSelection(evt) {
+    switch (evt.keyCode) {
+      case 37:
+        retrai();
+        break;
+      case 39:
+        rephai();
+        break;
+      case 38:
+        dilen();
+        break;
+      case 40:
+        dixuong();
+        break;
+    }
+  }
+  function docReady() {
+    window.addEventListener('keydown', moveSelection);
+  }
+</script>
+</html>

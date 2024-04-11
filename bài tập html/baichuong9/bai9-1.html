@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<form>
+  <img id="image" src="https://dathangsi.vn/upload/products/2019/12/0643-trai-banh-da-bong-official-so-4-va-so-5.jpg"
+       style="width: 30%" alt="">
+  <p>Click button below to move the image to right</p>
+  <input type="button" value="Click Me" onclick="Moveright();">
+
+</form>
+<script>
+  let banh = null;
+  banh = document.getElementById("image");
+
+  function init() {
+    console.log(1)
+    banh = document.getElementById("image");
+    banh.style.position = "relative";
+    banh.style.left="0px"
+  }
+
+  function Moveright() {
+    banh.style.left = (parseInt(banh.style.left)) + 10 + "px"
+  }
+
+  window.onload = init;
+
+</script>
+
+</body>
+</html>
