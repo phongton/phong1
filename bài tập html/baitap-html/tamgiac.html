@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<script>
+  let luong=+prompt("lương nhân viên");
+  let gio_lv=+prompt("số h lam việc trong tháng");
+  let thuong=0;
+  if (gio_lv>=200) {
+    thuong = 0.2 * luong;
+  }else if(gio_lv>=100 && gio_lv<200) {
+    thuong = 0.1 * luong
+  }else {thuong=0;}
+  if (thuong>0) {
+    document.write("nhan vien dc thuong" + thuong
+    "VND")
+  }else {"nhan vien khong dc thuong)"}
+</script>
+
+</body>
+</html>

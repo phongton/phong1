@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<h1>Kiểm tra số ngày trong tháng</h1>
+<input type="number" min="1" max="12" id="thang" placeholder="nhập tháng" style="width: 100px">
+<button type="button" onclick="kiemtrathang()">check</button>
+<p id="result"> hiển thị ơ đây:</p>
+<script>
+  let thang1="1";
+  let thang2="2";
+  let thang3="3";
+  let thang4="4";
+  let thang5="5";
+  let thang6="6";
+  let thang7="7";
+  let thang8="8";
+  let thang9="9";
+  let thang10="10";
+  let thang11="11";
+  let thang12="12";
+  function kiemtrathang(){
+    let thang=document.getElementById("thang").value;
+    if (thang===thang1 || thang===thang3 || thang===thang5 || thang===thang7 || thang===thang8 || thang===thang10||thang===thang12){
+      document.getElementById("result").innerHTML="thang"+thang+"có 31 ngày"
+    }else if (thang===thang4||thang===thang6||thang===thang9||thang===thang11){
+      document.getElementById("result").innerHTML="thang"+thang+"có 30 ngày"
+    }else if (thang===thang2){
+      document.getElementById("result").innerHTML="thang"+thang+"có 28 hoặc 29 ngay"
+    }else{
+      document.getElementById("result").innerHTML="vui lòng nhập tháng"
+    }
+  }
+
+
+
+</script>
+</body>
+</html>
