@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<body>
+<button style="border-color: green; border-width: 5px;" id="button1" value="2" onclick="doihinhanh1();" class="btn image1"><img id="hang1" src="anh12.png" height="196" width="622"></button>
+<br>
+<button style="border-color: green; border-width: 5px;" id="button2" value="2" onclick="doihinhanh2();" class="btn image2"><img id="hang2" src="anh22.png" height="196" width="622"></button>
+<br>
+<button style="border-color: green; border-width: 5px;" id="button3" value="2" onclick="doihinhanh3(); " class="btn image3"><img id="hang3" src="anh32.png" height="196" width="622"></button>
+<br>
+<script>
+
+  function doihinhanh1() {
+    let anhhang1 = document.getElementById("hang1").getAttribute('src');
+
+    if (anhhang1 === "anh11.png") {
+      document.getElementById("hang1").src = "anh12.png";
+      document.getElementById("button1").value = 2;
+    } else if (anhhang1 === "anh12.png") {
+      document.getElementById("hang1").src = "anh13.png";
+      document.getElementById("button1").value = 3;
+    } else if (anhhang1 === "anh13.png") {
+      document.getElementById("hang1").src = "anh11.png";
+      document.getElementById("button1").value = 1;
+
+    }
+    kiemtra()
+  }
+
+  function doihinhanh2() {
+
+    let anhhang2 = document.getElementById("hang2").getAttribute('src');
+    if (anhhang2 === "anh21.png") {
+      document.getElementById("hang2").src = "anh22.png";
+      document.getElementById("button2").value = 2;
+    } else if (anhhang2 === "anh22.png") {
+      document.getElementById("hang2").src = "anh23.png";
+      document.getElementById("button2").value = 3;
+    } else if (anhhang2 === "anh23.png") {
+      document.getElementById("hang2").src = "anh21.png";
+      document.getElementById("button2").value = 1;
+
+    }
+    kiemtra()
+  }
+
+  function doihinhanh3() {
+
+    let anhhang3 = document.getElementById("hang3").getAttribute('src');
+    if (anhhang3 === "anh31.png") {
+      document.getElementById("hang3").src = "anh32.png";
+      document.getElementById("button3").value = 2;
+    } else if (anhhang3 === "anh32.png") {
+      document.getElementById("hang3").src = "anh33.png";
+      document.getElementById("button3").value = 3;
+    } else if (anhhang3 === "anh33.png") {
+      document.getElementById("hang3").src = "anh31.png";
+      document.getElementById("button3").value = 1;
+    }
+    kiemtra()
+  }
+
+  function kiemtra() {
+
+    let giatrianh1 = document.getElementById("button1").value;
+    let giatrianh2 = document.getElementById("button2").value;
+    let giatrianh3 = document.getElementById("button3").value;
+    if ((giatrianh1 == giatrianh2) && (giatrianh1 == giatrianh3)) {
+      document.getElementById("button1").style.borderColor = "green";
+      document.getElementById("button2").style.borderColor = "green";
+      document.getElementById("button3").style.borderColor = "green";
+
+
+
+      alert("Dung roi");
+
+    }else{
+      document.getElementById("button1").style.borderColor = "red";
+      document.getElementById("button2").style.borderColor = "red";
+      document.getElementById("button3").style.borderColor = "red";
+    }
+
+  }
+</script>
+
+</body>
+
+</body>
+</html>
