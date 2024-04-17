@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<script>
+let input = [];
+let length= input.length ;
+let sum = 0;
+let tb= null;
+length = +prompt('Nhập kích thước của mảng');
+while (!Number.isInteger(length) || length <= 0 )  {
+length = +prompt('Nhập lại kích thước của mảng');
+}
+for ( let i = 0; i < length; i++) {
+do {
+input[i] = +prompt('element ' + i);
+}
+while (!Number.isInteger(input[i])) {
+if ( input[i] < 0 || input[i] > 10 ) {
+input[i] = prompt('Giá trị chỉ được nằm trong khoảng từ 0 đến 10');
+}
+}
+}
+for ( let i = 0; i < length; i++) {
+sum = sum + input[i];
+}
+tb=sum/length;
+document.write(tb);
+
+</script>
+</body>
+</html>
