@@ -5,9 +5,29 @@
   <title>Title</title>
 </head>
 <body>
+<span>Nhập từ :</span>
+<input type="text" id=" str" placeholder="google dịch"/>
+<button type="button" onclick="onTranslate()"> dịch</button>
+<p id="result"></p>
 <script>
-  // let mycolor = ["Red", "Green", "White", "Black"];
-  // console.log(mycolor.join());
+  function onTranslate() {
+    let arreng = ["english", "vietnammese", "handsome"];
+    let arrvie = ["tiếng anh", "tiếng việt ", "đẹp trai"];
+    let str = document.getElementById(" str").value;
+    let index_eng = 0;
+    let result = "";
+    for (let i = 0; i < arreng.length; i++) {
+      if (str === arreng[i]) {
+        index_eng = i;
+        for (let j = 0; j < arrvie.length; j++) {
+          if (index_eng === j) {
+            result = arrvie[j];
+          }
+        }
+      }
+    }
+    document.getElementById("result").innerHTML = result;
+  }
 
 </script>
 
