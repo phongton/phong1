@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<script>
+  function footToMeter(foot){ // tạo hàm footToMeter có tham số là foot
+    let meter = 0.305* foot; // tạo biến meter
+    return meter;  // trả giá trị của meter
+  }
+  function meterToFoot(meter){// tạo hàm meterToFoot có tham số là meter
+    let foot = 3.279* meter; // tạo biến foot
+    return foot;   // trả giá trị của foot
+  }
+  let foot = +prompt("nhập foot");    // tạo biến foot vaf cho nó giá trị bằng hàm prompt để nhập giá trị của nó
+  let meter = +prompt("nhập meter ")
+  document.write(foot+ " foot  = "+ footToMeter(foot) + " meter") // hiển thị giá tr của foot và gọi hàm footTOMeter
+  document.write("<br>");
+  document.write(meter+ " meter  = "+ meterToFoot(meter)+ " foot")// tượng tự
+
+</script>
+
+</body>
+</html>

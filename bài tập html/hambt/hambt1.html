@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<script>
+  let number= +prompt("nhập số cần kiểm tra")
+  isPrime(number)
+  function isPrime(number){
+    let count= 0 ; // gọi 1 biến count để đếm số uoớc
+    let isPrime = false;// gọi 1 biến là số nguyên tố và gán giá trị = false
+    if(number === 0){ // nếu tham số = 0 cho ra kết quả không phải số nguyên tố
+      alert(number+" đây khong phải số nguyên ")
+    }else for (let i = 1; i <= number; i++) {  //ngược lại tạo 1 vòng lặp tạo giá trị i =1 nếu i <= number đi tới bước tiếp
+      if(number%i===0){  //nếu tham so number nhập vào / hết cho i thì
+        count++; // thì ước được taăng thêm 1 và i đc thăng 1 cho
+      }
+    }
+    if (count===2){  // khi ước ở trên = 2 thì giá trị biên isPrime baằng trưe
+      isPrime=true;
+    }
+    if(isPrime){//nêus thoả điều kiện cuủa hàm isPrime thì cho kết quả là số nguyên
+      alert(number+"là số nguyên  ")
+    }else {
+      alert(number+"không phai số nguyên")
+    }
+
+
+  }
+
+
+</script>
+</body>
+</html>
