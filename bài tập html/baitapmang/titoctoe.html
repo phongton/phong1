@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<script>
+  let arr = [ [] , [] , [] , []];
+  let board = "<table>"
+  for (let i = 0; i <4 ; i ++ ){
+    board += "<tr>"
+    for (j = 0 ; j<4 ; j ++){
+      board += "<td>" + arr[i][j]+"</td>"
+
+    }
+    board += "</tr>"
+
+  }
+  board = "</table>";
+  document.write(board)
+</script>
+
+</body>
+</html>

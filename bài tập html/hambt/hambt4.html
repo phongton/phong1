@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<script>
+  // function square(num){
+  //   return Math.pow(num,2)
+  // }
+  // let number = +prompt("nhap so can binh phuong");
+  // console.log(square(number));
+
+
+
+  // function premeter(radius){
+  //   let pre = radius * Math.PI *2;
+  //   return pre;
+  // }
+  // function acreage(radius){
+  //  let acr = Math.PI*Math.pow(radius,2);
+  //   return acr;
+  // }
+  // let radi = prompt("nhap ban kính")
+  // console.log("diện tích hình tròn "+acreage(radi))
+  // console.log("chu vi hình tròn "+premeter(radi))
+
+
+
+//   function tinhGiaiThua(n) {
+//     if (n === 0 || n === 1) {
+//       return 1; // Giai thừa của 0 và 1 là 1
+//     } else {
+//       let giaiThua = 1;
+//       for (let i = 2; i <= n; i++) {
+//         giaiThua *= i;
+//       }
+//       return giaiThua;
+//     }
+//   }
+// let songuyen = prompt("nhap so nguyên:");
+//   console.log(tinhGiaiThua(songuyen))
+
+
+  // function checknumber(number){
+  //   if (isNaN(number)){
+  //     return false;
+  //   }else {
+  //     return number;
+  //   }
+  // }
+  // let num = prompt("nhập số vào:")
+  // console.log(checknumber(num))
+
+
+
+//   function checknumber(x,y,z){
+//     let min = x;
+//     if (y< min){
+//       min = y;
+//     }if (z< min){
+//       min = z
+//     }return min
+//   }
+// let x = prompt(" nhap gia tri x :")
+// let y = prompt(" nhap gia tri y :")
+// let z = prompt(" nhap gia tri z :")
+// document.write(checknumber(x,y,z))
+
+  // function checknumber(num){
+  //   if (num>0){
+  //     document.write(num+" là số nguyên dương ")
+  //   } else {
+  //     return false;
+  //   }
+  // }
+  // let number = +prompt(" nhập số cần kiểm tra : ")
+  // console.log(checknumber(number));
+
+  // function changenumber( x,y){
+  //   let temp = x;
+  //   x= y ;
+  //   y= temp;
+  //   return [x, y ]
+  // }
+  // let a = 10;
+  // let b = 20;
+  // let number = changenumber(a,b);
+  // console.log(number[0],number[1])
+
+// function changeArray(arr){
+//   return arr.reverse();
+// }
+// let Array = [1,2,3,4,5];
+// let change = changeArray(Array)
+//   document.write(change)
+
+  let count = 0;
+  function countnumber(arr,rra){
+    for (let i =0; i< arr.length; i++){
+      if (arr[i] === rra){
+        count++;
+      }
+    }
+    if (count > 0) {
+      return count;
+    } else {
+      return -1;
+    }
+  }
+
+  let Array= ['a','a','b','b','c','d','e']
+  let RRa = prompt('nhap ký tự bất kỳ:')
+
+  console.log(countnumber(Array,RRa));
+
+
+</script>
+
+</body>
+</html>

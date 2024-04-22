@@ -36,10 +36,20 @@
   // result = addNumbers();
   // alert(result)
 
-  let arr;
-  arr = ["Polaris", " Aldebaran", " Deneb", " Vega", " Altair", "Dubhe", "Regulus"];
-  let arr1;
-  arr1 = ['Ursa Minor', 'Tarurus',' Cygnus', 'Lyra', 'Aquila', 'Ursa Major'  'Leo'];
+  let arr = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
+  let arr1 = ['Ursa Minor', 'Tarurus', ' Cygnus', 'Lyra', 'Aquila', 'Ursa Major', 'Leo'];
+
+  function checkstar(star) {
+   let index = arr.indexOf(star);
+   if (index === -1){
+     document.write("khong tim thay");
+   }else {
+     document.write(arr1[index])
+   }
+  }
+  let stars = prompt("nhap sao vao")
+  checkstar(stars);
+
 
 
 </script>
