@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<canvas id="myCanvas" width="1368px" height="768px" style="border: 1px solid #d3d3d3 "></canvas>
+<script>
+  class Circle{   // tạo lớp circle
+    constructor(x,y,radius) {  // khai baos thuô tinhs cho circle
+      this.x = x;         // tham chiếu cacs th
+      this.y = y;
+      this.radius = radius;
+    }
+    getradomhex(){          //tạo phương thức ngẫu nhiên để gán vào phương thức  màu ngẫu nhiên
+      return Math.floor(Math.random()*255);
+
+    }
+    getradomcolor(){      // tạo phương thức tạo màu ngẫu nhiên
+      let red = this.getradomhex();   // tạo biến màu gán giá trị ngẫu nhiên getradomhex cho nó
+      let green = this.getradomhex();
+      let blue = this.getradomhex();
+      return "rgb(" + red + "," + blue + "," + green +")"//Câu lệnh mô tả một chuỗi màu sử dụng các giá trị RGB. sẽ ra chuỗi rgb(red,blue,green)
+    }
+
+    createcircle(){        //tạo phương thuức để tạo vòng tròn a
+      let ctx = document.getElementById("myCanvas").getContext("2d"); // gán giá trị ctx lấy gi trị từ bảng canvas ở html và cho nó là hình 2d
+      let radius = Math.floor(Math.random()*80); // tạo 1 biến để giá trị của chu vi là radom
+      let color = this.getradomcolor()  // tạo 1 biến color tham chiếu với phương thức getradoncolor ở trên
+      let x =Math.random()*window.innerWidth; // cho 1 biến x để lấy giá trị của chêuf dài cửa sổ window
+      let y =Math.random()*window.innerHeight ; //cho 1 biến y để lấy giá trị của chêuf dài cửa sổ window
+      let circle = new Circle(x,y,radius);
+      ctx.beginPath(); //sử dụng để bắt đầu một đường vẽ mới hoặc một con đường mới trên canvas.
+      ctx.arc(circle.x,circle.y,circle.radius,0,2*Math.PI);
+      ctx.fillStyle=color;
+      ctx.fill();
+    }
+    createMulticircle(){
+      for (let i = 0; i < 100; i++) {
+        this.createcircle()
+
+      }
+    }
+
+  }
+let z= new Circle();
+  z.createMulticircle()
+
+
+
+</script>
+</body>
+</html>
