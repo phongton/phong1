@@ -1,0 +1,30 @@
+button{
+  background-color: #73AD21;
+  width: 50px;
+  border-radius:15px
+}
+
+.ppp{
+  border: 1px solid   ;
+  width: 300px;
+  height: 100px;
+}
+p{
+  color: red;
+}
+tbody,td,tr {
+
+  width: 1000px;
+  height: 50px;
+}
+table{
+  border-collapse:collapse;
+}
+table tr:nth-child(even){
+  background-color:#eee;
+}
+table tr:nth-child(odd){
+  background-color:white;}
+
+
+
