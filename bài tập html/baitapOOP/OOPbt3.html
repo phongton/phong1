@@ -5,7 +5,50 @@
   <title>Title</title>
 </head>
 <body>
+<canvas id="rectangle" width="1000" height="1000"></canvas>
+<script>
+  class rectangle{
+    width;
+    height;
+    constructor(width,height) {
+      this.width = width;
+      this.height = height;
+    }
+    getWidth(){
+      return this.width;
+    }
+    getHeight(){
+      return this.height;
+    }
+    setWidth() {
+      this.width = width;
+    }
+    setHeight(){
+      this.height = height;
+    }
+    getAcreage(){
+      return this.width * this.height;
 
+    }
+    getPerimeter(){
+      return (this.width+this.height) * 2;
+
+    }
+
+
+  }
+  let x = new rectangle(250,200);
+  let width = x.getWidth();
+  let height = x.getHeight();
+  x.setWidth();
+  x.getWidth();
+  document.write(x.getWidth());
+  let canvas = document.getElementById("rectangle").getContext('2d');
+  canvas.fillStyle='#d00000'
+  canvas.fillRect(10, 10, width, height)
+
+
+</script>
 
 </body>
 </html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<div id="game"></div>
+
+<script>
+  function Hero(image, top, left, size){
+    this.image = image;
+    this.top = top;
+    this.left = left;
+    this.size = size;
+
+    this.getHeroElement = function(){
+      return '<img width="'+ this.size + '"' +
+        ' height="'+ this.size + '"' +
+        ' src="' + this.image +'"' +
+        ' style="top: '+this.top+'px; left:'+this.left+'px;position:absolute;" />';
+    }
+
+    this.moveRight = function(){
+      this.left += 20;
+      return this.left = left;
+    }
+
+  }
+
+  let hero = new Hero('https://i.pinimg.com/474x/90/57/0a/90570addee2645866a597530721f37fd.jpg', 20, 30, 200);
+
+
+
+</script>
+
+</body>
+</html>

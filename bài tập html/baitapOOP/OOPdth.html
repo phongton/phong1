@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<script>
+  class Mobile {
+    constructor(pin, draft, inbox, sentMessage, status, phone) {
+      this.pin = pin;
+      this.draft = draft;
+      this.ibox = inbox;
+      this.sentMessage = sentMessage;
+      this.status = status;
+      this.phone = phone;
+    }
+
+    TurnOnOrOf() {
+      return this.status;
+      return this.pin - 1
+    }
+
+    TurnOn() {
+      this.status = true;
+      this.pin = this.pin - 1;
+    }
+
+    TurnOf() {
+      this.status = false;
+    }
+
+    ChargeBattery() {
+      while (this.pin <= 100) {
+        this.pin = this.pin + 1;
+      }
+    }
+
+    WriteMessage() {
+      if (this.status) {
+        this.draft = prompt("nhập tin nhắn : ");
+        this.pin = this.pin - 1;
+      }
+
+    }
+
+    ReciveMess(message, mobile) {
+      if (this.status) {
+        this.ibox.unshift(message + "~" + mobile.phone)
+        this.pin = this.pin - 1;
+      }
+    }
+
+    sendMessage(mobile) {
+      if (this.status) {
+        this.ReciveMess();
+        this.sentMessage.unshift(this.draft);
+        mobile.ReciveMess(this.draft, this);
+        this.draft = "";
+        this.pin = this.pin - 1;
+      }
+    }SeenMess(){
+      if(this.status){
+        for (let i = 0; i < this.sendMessage.length; i++) {
+          document.getElementById('result').innerHTML="Tin nhắn đ ửi của bạn: "
+          this.sendMessage([i]);
+
+        }
+      }this.pin --;
+
+    }
+
+  }let M =new Mobile(100);
+  document.write(M.WriteMessage());
+  document.write(M.SeenMess())
+</script>
+
+</body>
+</html>
